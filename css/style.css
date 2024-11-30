@@ -1,0 +1,178 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    border: 4px solid #000;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.menu{
+    border: 1px solid #1aff8c;
+    height: 100px;
+    width: 100%;
+    background: #00e6ac;
+}
+
+ul.list_menu {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 25px auto;
+    list-style: none;
+    width: 50%;
+}
+
+ul.list_menu li {
+    position: relative;
+    float: left;
+    margin: 5px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+ul.list_menu li a:hover {
+    color: white;
+}
+
+ul.list_menu li::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -8px;
+    transition: all 0.5s ease-in-out;
+}
+
+ul.list_menu li:hover:after {
+    /* tran */
+    width: 100%;
+}
+
+
+
+ul.list_menu li a {
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+.header{
+    background-image: url("../images/yonexstringerbanner_en.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #dd80ff;
+    height: 700px;
+    width: 100%;
+}
+
+
+.main{
+    display: flex;
+    /* border: 5px solid #00ff80; */
+    height: auto;
+    width: 100%;
+
+}
+.sidebar{
+    border: 1px solid #000060;
+    height: 390px;
+    width: 20%;
+    margin-top: 5px;
+    margin-left: 4px;
+    /* background: #00e6ac; */
+    float: left;
+}
+
+ul.list_sidebar {
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+}
+
+ul.list_sidebar li {
+    position: relative;
+    margin: 5px;
+    padding: 10px;
+}
+
+ul.list_sidebar li a {
+    display: inline-block;
+    text-decoration: none;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.74);
+}
+
+ul.list_sidebar li a:hover {
+    color: black;
+}
+
+ul.list_sidebar li a::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -8px;
+    transition: all 0.5s ease-in-out;
+}
+
+ul.list_sidebar li a:hover::after {
+    width: 100%;
+}
+
+
+.maincontent{
+    border: 1px solid #000060;
+    height: auto;
+    width: 78%;
+    margin-top: 5px;
+    margin-right: 5px;
+    /* background: #00e6ac; */
+    float: right;
+}
+
+ul.list_maincontent {
+    /* border:  1px solid; */
+    width: 100%;
+}
+
+ul.list_maincontent li {    
+    margin: 0 auto;
+    padding: 10px;
+    height: max-content;
+    width: 20%;
+    float: left;
+    list-style: none;
+    text-align: center;
+}
+
+ul.list_maincontent li img {
+    margin: 0 auto;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+ul.list_maincontent li img:hover{
+    transform: scale(1.1);
+}
+
+ul.list_maincontent li .price{
+    color: red;
+}
+
+.clear{
+    clear: both;
+}
+
+.footer{
+    /* border: 1px solid #ff1a8c; */
+    height: 150px;
+    width: 100%;
+    background: #cc0000;
+}
