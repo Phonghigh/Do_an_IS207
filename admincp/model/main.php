@@ -15,6 +15,9 @@
         elseif (isset($_GET['query']) =='sua'){
             include("model/quanlydanhmucsp/sua.php");
         }
+        elseif ($pages=='quanlysanpham'){
+            include('model/quanlysp/them.php');
+        }
         //     include('../pages/main/giohang.php');
         // }
         // elseif ($pages == 'quanlybaiviet'){
