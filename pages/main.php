@@ -25,7 +25,6 @@
         else{
             include('../pages/main/index.php');
         }
-        ?>
-            
+        ?>  
     </div>
 </div>
