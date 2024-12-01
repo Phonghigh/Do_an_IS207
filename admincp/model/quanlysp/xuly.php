@@ -10,6 +10,10 @@ if (isset($_POST['themsanpham'])) {
     $tomtat = $_POST['tomtat'];
     $noidung = $_POST['noidung'];
     $tinhtrang = $_POST['tinhtrang'];
+    //Xử lý hình ảnh
+    $hinhanh = $_FILES['hinhanh']['name'];
+    $hinhanh_tmp = $_FILES['hinhanh']['tmp_name'];
+    move_uploaded_file($hinhanh_tmp,'uploads/'.$hinhanh);
 
     $sql_them = "INSERT INTO tbl_sanpham(tensanpham,masp,giasp,soluong,tomtat,noidung,tinhtrang) VALUE('".$tensanpham."','".$masp."','".$giasp."','".$soluong."','".$tomtat."','".$noidung."','".$tinhtrang."')";
     mysqli_query($conn, $sql_them);

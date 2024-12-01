@@ -1,6 +1,6 @@
 <h3>Thêm sản phẩm</h3>
 <table border="1" width = "50%">
-    <form method="POST" action="model/quanlysp/xuly.php">
+    <form method="POST" action="model/quanlysp/xuly.php" enctype="multipart/form-data">
         <tr>
             <td>Tên Sản phẩm</td>
             <td><input type="text" name="tensanpham" id=""></td>
