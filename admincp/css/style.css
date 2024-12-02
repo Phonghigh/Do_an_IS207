@@ -24,12 +24,25 @@ ul.admincp_list li {
     text-align: center;
     /* width: 400px; */
     padding-inline: 20px;
-    /* height: 100px; */
+    height: 100px;
     /* background: azure; */
 }
 
 .lietke_sp tr td img{
     width: 100%;
+}
+
+.them_sp tr td{
+    height: 30px;
+}
+
+.them_sp tr td input{
+    height: 30px;
+}
+
+.sua_sp{
+    margin: 0 auto;
+    padding: 0;
 }
 
 .sua_sp tr td{

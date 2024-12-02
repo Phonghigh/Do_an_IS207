@@ -46,7 +46,7 @@ echo "
         </tr>
         <tr>
             <td>
-            {$row_sp['hinhanh']}
+            <img src ='model/quanlysp/uploads/{$row_sp['hinhanh']}' width='50%'>
             </td>
             <td>
                 <input type= 'file' name='hinhanh_sua'>

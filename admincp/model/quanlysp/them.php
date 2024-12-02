@@ -1,5 +1,5 @@
 <h3>Thêm sản phẩm</h3>
-<table border="1" width = "50%">
+<table border="1" width = "50%" class="them_sp">
     <form method="POST" action="model/quanlysp/xuly.php" enctype="multipart/form-data">
         <tr>
             <td>Tên Sản phẩm</td>
