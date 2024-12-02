@@ -1,6 +1,6 @@
 <div class="main">
     <?php
-    include("../pages/sidebar/sidebar.php");
+    include("pages/sidebar/sidebar.php");
     ?>
     <div class="maincontent">
         <?php
@@ -11,19 +11,19 @@
             $pages = '';
         }
         if ($pages =='danhmucsanpham'){
-            include('../pages/main/danhmucsanpham.php');
+            include('pages/main/danhmucsanpham.php');
         }
         elseif ($pages == 'giohang'){
-            include('../pages/main/giohang.php');
+            include('pages/main/giohang.php');
         }
         elseif ($pages == 'tintuc'){
-            include('../pages/main/tintuc.php');
+            include('pages/main/tintuc.php');
         }
         elseif ($pages == 'lienhe'){
-            include('../pages/main/lienhe.php');
+            include('pages/main/lienhe.php');
         }
         else{
-            include('../pages/main/index.php');
+            include('pages/main/index.php');
         }
         ?>  
     </div>

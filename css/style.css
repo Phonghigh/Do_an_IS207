@@ -4,16 +4,17 @@ body{
 }
 
 .wrapper{
-    border: 4px solid #000;
+    border: 4px solid white;
     width: 90%;
     margin: 0 auto;
 }
 
 .menu{
-    border: 1px solid #1aff8c;
+    /* border: 1px solid #1aff8c; */
     height: 100px;
     width: 100%;
-    background: #00e6ac;
+    color: white;
+    background: aquamarine;
 }
 
 ul.list_menu {
@@ -52,8 +53,6 @@ ul.list_menu li:hover:after {
     width: 100%;
 }
 
-
-
 ul.list_menu li a {
     text-decoration: none;
     text-align: center;
@@ -65,11 +64,10 @@ ul.list_menu li a {
     background-image: url("../images/yonexstringerbanner_en.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    border: 1px solid #dd80ff;
+    /* border: 1px solid #dd80ff; */
     height: 700px;
     width: 100%;
 }
-
 
 .main{
     display: flex;
@@ -79,7 +77,7 @@ ul.list_menu li a {
 
 }
 .sidebar{
-    border: 1px solid #000060;
+    /* border: 1px solid #000060; */
     height: 390px;
     width: 20%;
     margin-top: 5px;
@@ -95,13 +93,32 @@ ul.list_sidebar {
 }
 
 ul.list_sidebar li {
-    position: relative;
     margin: 5px;
     padding: 10px;
+
+    height: 20px;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    /* text-align: center; */
+    background: white;
+    background-size: 200% 100%;
+    border-radius: 10px;
+    transition: background-position 0.5s ease-in-out, background 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+ul.list_sidebar li:hover {
+    background: linear-gradient(to right, #7efbff, #75b1ff, #9263ff); /* Chạy gradient khi hover */
+    background-position: -100% 0;
 }
 
 ul.list_sidebar li a {
-    display: inline-block;
+    display: inline-block;    
+    position: relative;
     text-decoration: none;
     text-align: left;
     color: rgba(0, 0, 0, 0.74);
@@ -119,7 +136,7 @@ ul.list_sidebar li a::after {
     width: 0;
     left: 0;
     bottom: -8px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 ul.list_sidebar li a:hover::after {
@@ -128,7 +145,7 @@ ul.list_sidebar li a:hover::after {
 
 
 .maincontent{
-    border: 1px solid #000060;
+    /* border: 1px solid #000060; */
     height: auto;
     width: 78%;
     margin-top: 5px;
@@ -174,5 +191,5 @@ ul.list_maincontent li .price{
     /* border: 1px solid #ff1a8c; */
     height: 150px;
     width: 100%;
-    background: #cc0000;
-}
+    /* background: #cc0000; */
+} 
