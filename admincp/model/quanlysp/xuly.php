@@ -31,11 +31,10 @@ if (isset($_POST['themsanpham'])) {
 //     header('Location:../../index.php?action=quanlydanhmucsanpham');
 // }
 
-// elseif (isset($_GET['query']) == 'xoa') {
-//     $id_sanpham = $_GET['id_sanpham'];
-//     $sql_xoa = "DELETE FROM tbl_sanpham WHERE id_sanpham=".$id_sanpham."";
-//     mysqli_query($conn, $sql_xoa);
-//     header('Location:../../index.php?action=quanlysanpham');
-//     // echo'thành công';
-// }
+elseif (isset($_GET['query']) == 'xoa') {
+    $id_sanpham = $_GET['id_sanpham'];
+    $sql_xoa = "DELETE FROM tbl_sanpham WHERE id_sanpham=".$id_sanpham."";
+    mysqli_query($conn, $sql_xoa);
+    header('Location:../../index.php?action=quanlysanpham');
+}
 ?>
