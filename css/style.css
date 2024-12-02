@@ -60,9 +60,9 @@ ul.list_menu li a {
     margin-right:  20px;
     /* gap: 10px; */
     position: relative;
-    text-decoration: none;
+    /* text-decoration: none; */
     /* text-align: center; */
-    font-weight: bold;
+    /* font-weight: bold; */
     color: black;
 }
 
@@ -125,7 +125,7 @@ ul.list_sidebar li:hover {
 ul.list_sidebar li a {
     display: inline-block;    
     position: relative;
-    text-decoration: none;
+    /* text-decoration: none; */
     text-align: left;
     color: rgba(0, 0, 0, 0.74);
 }
@@ -149,6 +149,10 @@ ul.list_sidebar li a:hover::after {
     width: 100%;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
 
 .maincontent{
     /* border: 1px solid #000060; */
@@ -188,6 +192,28 @@ ul.list_sidebar li a:hover::after {
 
 .grip_item_maincontent .price{
     color: red;
+}
+
+.grid_container_sanpham{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* text-align: center; */
+}
+
+.grid_container_sanpham img{
+    border-radius: 10px; /* Bo tròn góc (tuỳ chọn) */
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.2); /* Hiệu ứng mờ */
+    width: 80%;
+}
+
+.grid_item_sanpham .price{
+    font-size: 30px;
+    color: red;
+}
+
+.grid_item_sanpham{
+    display: inline;
 }
 
 .clear{
