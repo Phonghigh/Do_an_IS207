@@ -25,9 +25,9 @@
         // elseif ($pages == 'lienhe'){
         //     include('pages/main/lienhe.php');
         // }
-        // else{
-        //     include('pages/main/index.php');
-        // }
+        else{
+            include('pages/main/index.php');
+        }
         ?>  
     </div>
 </div>

@@ -1,33 +1,21 @@
-<h3>Sản phẩm mới nhất: </h3>
-<ul class="list_maincontent">
-                <li>
-                    <img src="images/product/0.webp" alt="Vợt cầu lông Calibar 300c">
-                    <p>Vợt cầu lông Calibar 300c</p>
-                    <p class="price">1,100,000đ</p>
-                </li>
-                <li>
-                    <img src="images/product/1.webp" alt="Vợt cầu lông Calibar 300c">
-                    <p>Vợt cầu lông 3D Calibar 200</p>
-                    <p class="price">1,100,000đ</p>
-                </li>
-                <li>
-                    <img src="images/product/2.webp" alt="Vợt cầu lông Calibar 300c">
-                    <p>Vợt Li Ning Aeronaut 4000C</p>
-                    <p class="price">1,100,000đ</p>
-                </li>
-                <li>
-                    <img src="images/product/3.webp" alt="Vợt cầu lông Calibar 300c">
-                    <p>Vợt cầu lông Calibar 001C</p>
-                    <p class="price">1,100,000đ</p>
-                </li>
-                <li>
-                    <img src="images/product/4.webp" alt="Vợt cầu lông Calibar 300c">
-                    <p>Vợt cầu lông Calibar 300B</p>
-                    <p class="price">1,100,000đ</p>
-                </li>
-                <li>
-                    <img src="images/product/5.webp" alt="Vợt cầu lông Calibar 300c">
-                    <p>Vợt Li Ning Aeronaut 6000D</p>
-                    <p class="price">1,100,000đ</p>
-                </li>
-            </ul>
+<?php
+    $sql_lietke_sp ="SELECT * FROM tbl_sanpham";
+    $row_lietke_sp = mysqli_query($conn,$sql_lietke_sp)
+?>
+
+<h3>Danh mục sản phẩm: </h3>
+<div class="grip_container_maincontent">
+    
+        <?php
+        while($row= mysqli_fetch_array($row_lietke_sp)) {
+            echo "
+            <div class='grip_item_maincontent'>
+                <img src='admincp/model/quanlysp/uploads/".$row['hinhanh']."' alt='".$row['hinhanh']."'>
+                <a href='?quanly=chitietsanpham&id=".$row['id_sanpham']."'>
+                <p>{$row['tensanpham']}</p>
+                <p class='price'>{$row['giasp']}đ </p>
+                </a>
+            </div>";
+        }
+        ?>
+</div>
