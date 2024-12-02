@@ -18,3 +18,16 @@ ul.admincp_list li {
 .clear{
     clear: both;
 }
+
+
+.lietke_sp tr td{
+    text-align: center;
+    width: auto;
+    padding-inline: 20px;
+    height: 100px;
+    /* background: azure; */
+}
+
+.lietke_sp tr td img{
+    width: 100%;
+}

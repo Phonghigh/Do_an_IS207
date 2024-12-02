@@ -1,24 +1,40 @@
 <h3>Liệt kê sản phẩm</h3>
 <?php
-    $sql_lietke_danhmucsp ="SELECT * FROM tbl_danhmuc ORDER BY thutu DESC";
-    $row_lietke_danhmucsp = mysqli_query($conn,$sql_lietke_danhmucsp)
+    $sql_lietke_sp ="SELECT * FROM tbl_sanpham";
+    $row_lietke_sp = mysqli_query($conn,$sql_lietke_sp)
 ?>
-<table border="1" width ="70%">
+<table border="1" width ="70%" class="lietke_sp">
     <tr>
         <th>Id</th>
         <th>Tên sản phẩm</th>
+        <th>Mã sản phẩm</th>
+        <th>Giá sản phẩm</th>
+        <th>Số lượng sản phẩm</th>
+        <th>Hình sản phẩm</th>
+        <th>Tóm tắt sản phẩm</th>
+        <th>Nội dung sản phẩm</th>
+        <th>Tình trạng sản phẩm</th>
         <th>Quản lý</th>
     </tr>
     <?php
     $i = 0;
-    while ($row = mysqli_fetch_array($row_lietke_danhmucsp)){
+    while ($row = mysqli_fetch_array($row_lietke_sp)){
         $i++;
     echo "<tr>
         <td>".$i."</td>
-        <td>".$row['tendanhmuc']."</td>
+        <td>".$row['tensanpham']."</td>
+        <td>{$row['masp']}</td>
+        <td>{$row['giasp']}</td>
+        <td>{$row['soluong']}</td>
         <td>
-            <a href=".'model/quanlydanhmucsp/xuly.php?query=xoa&id_danhmuc='.$row['id_danhmuc'].">Xóa</a>
-            <a href=".'?query=sua&id_danhmuc='.$row['id_danhmuc'].''.">Sửa</a>
+            <img src='model/quanlysp/uploads/{$row['hinhanh']}'>
+        </td>
+        <td>{$row['tomtat']}</td>
+        <td>{$row['noidung']}</td>
+        <td>{$row['tinhtrang']}</td>
+        <td>
+            <a href=".'model/quanlysp/xuly.php?query=xoa&id_sanpham='.$row['id_sanpham'].">Xóa</a>
+            <a href=".'?query=sua&id_sanpham='.$row['id_sanpham'].''.">Sửa</a>
         </td>
     </tr>";
     }

@@ -17,6 +17,7 @@
         }
         elseif ($pages=='quanlysanpham'){
             include('model/quanlysp/them.php');
+            include('model/quanlysp/lietke.php');
         }
         //     include('../pages/main/giohang.php');
         // }

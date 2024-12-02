@@ -9,11 +9,11 @@
 <body>
     <div class="wrapper">
         <?php
-            include("../admincp/config/connect.php");
-            include("../admincp/model/header.php");
-            include("../admincp/model/menu.php");
-            include("../admincp/model/main.php");
-            include("../admincp/model/footer.php");
+            include("config/connect.php");
+            include("model/header.php");
+            include("model/menu.php");
+            include("model/main.php");
+            include("model/footer.php");
         ?>
         
     </div>

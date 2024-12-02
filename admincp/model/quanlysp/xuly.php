@@ -15,12 +15,12 @@ if (isset($_POST['themsanpham'])) {
     $hinhanh_tmp = $_FILES['hinhanh']['tmp_name'];
     move_uploaded_file($hinhanh_tmp,'uploads/'.$hinhanh);
 
-    $sql_them = "INSERT INTO tbl_sanpham(tensanpham,masp,giasp,soluong,tomtat,noidung,tinhtrang) VALUE('".$tensanpham."','".$masp."','".$giasp."','".$soluong."','".$tomtat."','".$noidung."','".$tinhtrang."')";
+    $sql_them = "INSERT INTO tbl_sanpham(tensanpham,masp,giasp,soluong,hinhanh,tomtat,noidung,tinhtrang) VALUE('".$tensanpham."','".$masp."','".$giasp."','".$soluong."','".$hinhanh."','".$tomtat."','".$noidung."','".$tinhtrang."' )";
     mysqli_query($conn, $sql_them);
     header('Location:../../index.php?action=quanlysanpham');
 }
 
-// elseif (isset($_POST['suadanhmuc'])) {
+// elseif (isset($_POST['suasanpham'])) {
 //     $id_danhmuc_sua = $_GET['id_danhmuc'];
 //     $tendanhmuc_sua = $_POST['tendanhmuc_sua'];
 //     $thutu_sua = $_POST['thutu_sua'];
@@ -32,10 +32,10 @@ if (isset($_POST['themsanpham'])) {
 // }
 
 // elseif (isset($_GET['query']) == 'xoa') {
-//     $id_danhmuc = $_GET['id_danhmuc'];
-//     $sql_xoa = "DELETE FROM tbl_danhmuc WHERE id_danhmuc=".$id_danhmuc."";
+//     $id_sanpham = $_GET['id_sanpham'];
+//     $sql_xoa = "DELETE FROM tbl_sanpham WHERE id_sanpham=".$id_sanpham."";
 //     mysqli_query($conn, $sql_xoa);
-//     header('Location:../../index.php?action=quanlydanhmucsanpham');
+//     header('Location:../../index.php?action=quanlysanpham');
 //     // echo'thành công';
 // }
 ?>
