@@ -22,22 +22,23 @@ ul.list_menu {
     padding: 0;
     margin: 25px auto;
     list-style: none;
-    width: 50%;
+    width: 70%;
 }
 
 ul.list_menu li {
-    position: relative;
     float: left;
-    margin: 5px;
-    padding: 10px;
-    font-size: 18px;
+    margin-top: 30px;
+    /* margin-right: 20px; */
+    font-size: 20px;
+    /* width: 100px; */
 }
 
 ul.list_menu li a:hover {
     color: white;
 }
 
-ul.list_menu li::after {
+ul.list_menu li a::after {
+    /* display: none; */
     content: '';
     position: absolute;
     background-color: white;
@@ -48,14 +49,19 @@ ul.list_menu li::after {
     transition: all 0.5s ease-in-out;
 }
 
-ul.list_menu li:hover:after {
+ul.list_menu li a:hover:after {
     /* tran */
+    /* display: block; */
     width: 100%;
 }
 
 ul.list_menu li a {
+    /* padding: 20px; */
+    margin-right:  20px;
+    /* gap: 10px; */
+    position: relative;
     text-decoration: none;
-    text-align: center;
+    /* text-align: center; */
     font-weight: bold;
     color: black;
 }
@@ -151,35 +157,36 @@ ul.list_sidebar li a:hover::after {
     margin-top: 5px;
     margin-right: 5px;
     /* background: #00e6ac; */
-    float: right;
+    /* float: right; */
 }
 
-ul.list_maincontent {
+.grip_container_maincontent{
     /* border:  1px solid; */
-    width: 100%;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
 }
-
-ul.list_maincontent li {    
-    margin: 0 auto;
-    padding: 10px;
-    height: max-content;
-    width: 20%;
-    float: left;
-    list-style: none;
+.grip_item_maincontent{
+    display: inline;
     text-align: center;
-}
-
-ul.list_maincontent li img {
-    margin: 0 auto;
-    width: 100%;
+    /* border: 1px solid; */
+    border-radius: 10px; /* Bo tròn góc (tuỳ chọn) */
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2); /* Hiệu ứng mờ */
     transition: all 0.5s ease;
 }
 
-ul.list_maincontent li img:hover{
+.grip_item_maincontent img {
+    margin: 0 auto;
+    width: 100%;
+
+}
+
+.grip_item_maincontent:hover{
     transform: scale(1.1);
 }
 
-ul.list_maincontent li .price{
+.grip_item_maincontent .price{
     color: red;
 }
 
