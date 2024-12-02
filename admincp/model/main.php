@@ -12,8 +12,12 @@
             include("../admincp/model/quanlydanhmucsp/lietke.php");
             // include("../admincp/model/quanlydanhmucsp/sua.php");
         }
-        elseif (isset($_GET['query']) =='sua'){
+        elseif (isset($_GET['query']) and $_GET['query'] =='sua_danhmuc'){
+            // echo "{$_GET['query']}";
             include("model/quanlydanhmucsp/sua.php");
+        }
+        elseif (isset($_GET['query']) and $_GET['query'] == 'sua_sanpham'){
+            include("model/quanlysp/sua.php");
         }
         elseif ($pages=='quanlysanpham'){
             include('model/quanlysp/them.php');

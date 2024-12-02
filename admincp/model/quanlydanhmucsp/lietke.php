@@ -18,7 +18,7 @@
         <td>".$row['tendanhmuc']."</td>
         <td>
             <a href=".'model/quanlydanhmucsp/xuly.php?query=xoa&id_danhmuc='.$row['id_danhmuc'].">Xóa</a>
-            <a href=".'?query=sua&id_danhmuc='.$row['id_danhmuc'].''.">Sửa</a>
+            <a href=".'?query=sua_danhmuc&id_danhmuc='.$row['id_danhmuc'].''.">Sửa</a>
         </td>
     </tr>";
     }

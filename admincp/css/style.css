@@ -22,12 +22,23 @@ ul.admincp_list li {
 
 .lietke_sp tr td{
     text-align: center;
-    width: auto;
+    /* width: 400px; */
     padding-inline: 20px;
-    height: 100px;
+    /* height: 100px; */
     /* background: azure; */
 }
 
 .lietke_sp tr td img{
     width: 100%;
+}
+
+.sua_sp tr td{
+    width: 200px;
+}
+
+input{
+    width: 90%;
+}
+textarea{
+    width: 90%;
 }

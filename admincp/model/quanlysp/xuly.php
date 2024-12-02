@@ -20,16 +20,38 @@ if (isset($_POST['themsanpham'])) {
     header('Location:../../index.php?action=quanlysanpham');
 }
 
-// elseif (isset($_POST['suasanpham'])) {
-//     $id_danhmuc_sua = $_GET['id_danhmuc'];
-//     $tendanhmuc_sua = $_POST['tendanhmuc_sua'];
-//     $thutu_sua = $_POST['thutu_sua'];
-//     $sql_sua = "UPDATE tbl_danhmuc
-//                 SET tendanhmuc='{$tendanhmuc_sua}', thutu = {$thutu_sua}
-//                 WHERE id_danhmuc={$id_danhmuc_sua};";
-//     mysqli_query($conn, $sql_sua);
-//     header('Location:../../index.php?action=quanlydanhmucsanpham');
-// }
+elseif (isset($_POST['suasanpham'])) {
+    $id_sanpham = $_GET['id_sanpham'];
+    $tensanpham_sua = mysqli_real_escape_string($conn, $_POST['tensanpham_sua']);
+    $masp_sua = mysqli_real_escape_string($conn, $_POST['masp_sua']);
+    $giasp_sua = $_POST['giasp_sua'];
+    $soluong_sua = (int)$_POST['soluong_sua'];
+    $id_danhmuc_sua =$_POST['id_danhmuc_sua'];
+    $tinhtrang_sua = (int)$_POST['tinhtrang_sua'];
+    $tomtat_sua = mysqli_real_escape_string($conn, $_POST['tomtat_sua']);
+    $noidung_sua = mysqli_real_escape_string($conn, $_POST['noidung_sua']);
+
+    $hinhanh_sua = $_FILES['hinhanh_sua']['name'];
+    $hinhanh_tmp = $_FILES['hinhanh_sua']['tmp_name'];
+    move_uploaded_file($hinhanh_tmp,'uploads/'.$hinhanh_sua);
+
+    // Câu lệnh SQL cập nhật
+    $sql_sua = "UPDATE tbl_sanpham
+                SET tensanpham = '{$tensanpham_sua}',
+                    masp = '{$masp_sua}',
+                    giasp = '{$giasp_sua}',
+                    soluong = {$soluong_sua},
+                    hinhanh = '{$hinhanh_sua}',
+                    tomtat = '{$tomtat_sua}',
+                    noidung = '{$noidung_sua}',
+                    tinhtrang = {$tinhtrang_sua},
+                    id_danhmuc = '{$id_danhmuc_sua}'
+                WHERE id_sanpham = {$id_sanpham};";
+
+    mysqli_query($conn, $sql_sua);
+    header('Location:../../index.php?action=quanlysanpham');
+}
+
 
 elseif (isset($_GET['query']) == 'xoa') {
     $id_sanpham = $_GET['id_sanpham'];

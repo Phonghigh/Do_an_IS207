@@ -6,7 +6,7 @@
     $result = mysqli_query($conn,$sql_danhmucsp);
     $row_danhmucsp = mysqli_fetch_assoc($result);
 echo "
-<table border=".'1'." width = ".'50%'.">
+<table border=".'1'." width = ".'50%'." >
     <form method=".'POST'." action="."model/quanlydanhmucsp/xuly.php?id_danhmuc={$id_danhmuc}".">
         <tr>
             <th>Dữ liệu hiện tại</th>
@@ -30,7 +30,7 @@ echo "
         </tr>
         <tr>
             <td collapse =".'2'.">
-                <input type =".'submit'." name =".'suadanhmuc'." value=".'Sửa dữ liệu'.">
+                <input type =".'submit'." name =".'suadanhmuc'." value='Sửa dữ liệu'>
             </td>
         </tr>
     </form>

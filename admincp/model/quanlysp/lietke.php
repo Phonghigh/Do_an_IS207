@@ -34,7 +34,7 @@
         <td>{$row['tinhtrang']}</td>
         <td>
             <a href=".'model/quanlysp/xuly.php?query=xoa&id_sanpham='.$row['id_sanpham'].">Xóa</a>
-            <a href=".'?query=sua&id_sanpham='.$row['id_sanpham'].''.">Sửa</a>
+            <a href=".'?query=sua_sanpham&id_sanpham='.$row['id_sanpham'].''.">Sửa</a>
         </td>
     </tr>";
     }
