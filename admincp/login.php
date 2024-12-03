@@ -102,19 +102,7 @@
                 <input type="text" placeholder="Email" name="Email" required>
                 <input type="password" placeholder="Password" name="Password" required>
                 <input type="submit" value="Login" name="dangnhap">
-                <p>Don't have an account? <a href="#" onclick="showRegister()">Register</a></p>
-            </form>
-        </div>
-
-        <div class="form-container hidden" id="register-form-container">
-            <h2>Register</h2>
-            <form id="register-form">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <input type="password" placeholder="Confirm Password" required>
-                <input type="submit" value="Register" name="dangky">
-                <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+                <!-- <p>Don't have an account? <a href="#" onclick="showRegister()">Register</a></p> -->
             </form>
         </div>
     </div>

@@ -253,3 +253,9 @@ a{
     align-content: center;
     /* background-color: black; */
 }
+
+.form-container input{
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+}

@@ -1,7 +1,13 @@
 <?php
-session_start();
+// session_start();
 ?>
-<p>Giỏ hàng</p>
+<p>Giỏ hàng
+    <?php
+        if (isset( $_SESSION['dangky'])) {
+            echo "Xin chào {$_SESSION['dangky']}";
+        }
+    ?>
+</p>
 
 <?php
 // echo"<pre>";
@@ -46,16 +52,22 @@ session_start();
     </tr>
     <?php
         }
-    echo "
-    <tr>
-        <td colspan ='7'>
-            <p>Tổng tiền: ";echo number_format($tong_tien); echo " đ</p>
-        </td>
-        <td>
-            <a href='pages/main/themgiohang.php?xoatatca=1'>Xóa tất cả</a>
-        </td>
-    </tr>
-    ";
+        echo "
+        <tr>
+            <td colspan ='7'>
+                <p>Tổng tiền: ";echo number_format($tong_tien); echo " đ</p>
+            </td>
+            <td>
+                <a href='pages/main/themgiohang.php?xoatatca=1'>Xóa tất cả</a>
+            </td>
+        </tr>
+        <tr>
+        <td colspan ='8'>";
+        if(isset($_SESSION['dangky'])) {
+            echo "<a href='index.php?quanly=thanhtoan'>Đặt hàng</a></td></tr>";
+        }else{
+            echo "<a href='index.php?quanly=dangky'>Đăng Ký để đặt hàng</a></td></tr>";
+        }
     }
     
     else {
@@ -71,3 +83,4 @@ session_start();
     }
     ?>
 </table>
+

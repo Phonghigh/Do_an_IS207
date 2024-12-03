@@ -3,6 +3,15 @@
     $row_lietke_danhmucsp = mysqli_query($conn,$sql_lietke_danhmucsp)
 ?>
 
+<?php
+    if(isset($_GET['dangxuat'])){
+        echo'đăng xuất';
+        unset($_SESSION['dangky']);
+        unset($_SESSION['dangnhap']);
+        header('Location: index.php');
+    }
+?>
+
 <div class="menu">
     <ul class="list_menu">
         <li><a href="index.php">Trang chủ</a></li>
@@ -18,8 +27,16 @@
         <li><a href="index.php?quanly=tintuc">Tin tức</a></li>
         <li><a href="index.php?quanly=lienhe">Liên hệ</a></li>
     </ul>
-    <a href="index.php?quanly=dangky">Đăng Ký</a>
-    <a href="">Đăng Nhập</a>
-
+    
+    <?php 
+        if(isset($_SESSION['dangky'])){
+            
+            echo "<p class='ten_taikhoan'>Xin chào {$_SESSION['dangky']}</p>";
+            echo "<a href='index.php?dangxuat'>Đăng Xuất</a>";
+        }else{
+            echo "<a href='index.php?quanly=dangnhap'>Đăng Nhập</a>";
+            echo "<a href='index.php?quanly=dangky'>Đăng Ký</a>";
+        }
+    ?>
 </div>
         

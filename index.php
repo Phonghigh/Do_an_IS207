@@ -9,6 +9,7 @@
 <body>
     <div class="wrapper">
         <?php
+            session_start();
             include("admincp/config/connect.php");
             include("pages/header.php");
             include("pages/menu.php");

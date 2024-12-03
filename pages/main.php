@@ -22,6 +22,12 @@
         elseif ($pages == 'dangky'){
             include('pages/main/dangky.php');
         }
+        elseif ($pages == 'dangnhap'){
+            include('pages/main/dangnhap.php');
+        }
+        elseif ($pages == 'thanhtoan'){
+            include('pages/main/thanhtoan.php');
+        }
         // elseif ($pages == 'tintuc'){
         //     include('pages/main/tintuc.php');
         // }
