@@ -14,7 +14,7 @@
                 <img src='admincp/model/quanlysp/uploads/".$row['hinhanh']."' alt='".$row['hinhanh']."'>
                 <a href='?quanly=chitietsanpham&id=".$row['id_sanpham']."'>
                 <p>{$row['tensanpham']}</p>
-                <p class='price'>{$row['giasp']}đ </p>
+                <p class='price'>";echo number_format($row['giasp']); echo "đ </p>
                 </a>
             </div>";
         }

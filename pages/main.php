@@ -16,9 +16,9 @@
         elseif ($pages == 'chitietsanpham'){
             include('pages/main/sanpham.php');
         }
-        // elseif ($pages == 'giohang'){
-        //     include('pages/main/giohang.php');
-        // }
+        elseif ($pages == 'giohang'){
+            include('pages/main/giohang.php');
+        }
         // elseif ($pages == 'tintuc'){
         //     include('pages/main/tintuc.php');
         // }

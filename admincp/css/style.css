@@ -19,17 +19,19 @@ ul.admincp_list li {
     clear: both;
 }
 
-
-.lietke_sp tr td{
-    text-align: center;
-    /* width: 400px; */
+.lietke_sp th{
+    /* border: 1px solid black; */
+    /* width: 100px; */
+    /* overflow: hidden; */
+    /* text-align: center; */
+    /* width: 200px; */
     padding-inline: 20px;
-    height: 100px;
+    /* height: 100px; */
     /* background: azure; */
 }
 
 .lietke_sp tr td img{
-    width: 100%;
+    height: 300px;
 }
 
 .them_sp tr td{

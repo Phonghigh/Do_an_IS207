@@ -17,15 +17,18 @@
             ?>"
         >
     </div>
-    <div class="grid_item_sanpham">
-        <?php
-        echo 
-            "<h1>{$sanpham['tensanpham']}</h1>
-            <p><b>Giá sản phẩm: </b><span class='price'>{$sanpham['giasp']} đ</span> </p>
-            <p><b>Mã sản phẩm: </b>{$sanpham['masp']}</p>
-            <p><b>Số lượng sản phẩm: </b>{$sanpham['soluong']}</p>";
-        ?>
-    </div>
+    <form method="POST" action="pages/main/themgiohang.php?id_sanpham=<?php echo $sanpham['id_sanpham']?>">
+        <div class="grid_item_sanpham">
+            <?php
+            echo 
+                "<h1>{$sanpham['tensanpham']}</h1>
+                <p><b>Giá sản phẩm: </b><span class='price'>";echo number_format($sanpham['giasp']); echo "đ</span> </p>
+                <p><b>Mã sản phẩm: </b>{$sanpham['masp']}</p>
+                <p><b>Số lượng sản phẩm: </b>{$sanpham['soluong']}</p>";
+            ?>
+            <p><input type="submit" name="themgiohang" value="Thêm Giỏ Hàng" class="themgiohang"></p>
+        </div>
+    </form>
 </div>
 
 <?php
