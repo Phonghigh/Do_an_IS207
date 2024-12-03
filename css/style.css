@@ -278,3 +278,56 @@ a{
     border-radius: 10px;
     color: white;
 }
+
+.timkiem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    background: #f9f9f9;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timkiem input[type="text"] {
+flex: 1;
+padding: 10px 15px;
+font-size: 16px;
+border: 2px solid #ddd;
+border-radius: 20px;
+transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timkiem input[type="text"]:focus {
+border-color: #0e1bd1;
+box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+outline: none;
+}
+
+.timkiem input[type="submit"] {
+padding: 10px 20px;
+font-size: 16px;
+background-color: #0e1bd1;
+color: white;
+border: none;
+border-radius: 20px;
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.timkiem input[type="submit"]:hover {
+background-color: #0e1bd1;
+transform: scale(1.05);
+}
+
+.timkiem input[type="submit"]:active {
+transform: scale(1);
+}
+
+.timkiem input[type="text"]::placeholder {
+color: #999;
+font-style: italic;
+}
