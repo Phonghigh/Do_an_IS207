@@ -19,6 +19,9 @@
         elseif ($pages == 'giohang'){
             include('pages/main/giohang.php');
         }
+        elseif ($pages == 'dangky'){
+            include('pages/main/dangky.php');
+        }
         // elseif ($pages == 'tintuc'){
         //     include('pages/main/tintuc.php');
         // }

@@ -57,3 +57,11 @@ input{
 textarea{
     width: 90%;
 }
+
+.Exit{
+    padding: 10px;
+    background: gray;
+    color: white;
+    float: right;
+    margin-right: 50px;
+}
