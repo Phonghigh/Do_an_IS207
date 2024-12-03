@@ -3,13 +3,20 @@
     include("../../admincp/config/connect.php");
     //thêm số lượng
     if (isset($_SESSION["cart"]) && isset($_GET["cong_sl"])) {
+        // $_SESSION["cart"]
         $id = $_GET["id"];
+        // if ($)
         foreach ($_SESSION["cart"] as $cart_item) {
             if ($cart_item["id"] !== $id) {
                 $product[] = array('tensanpham'=>$cart_item['tensanpham'],'id'=>$cart_item['id'],'soluong'=>$cart_item['soluong'],'giasp'=>$cart_item['giasp'],'hinhanh'=>$cart_item['hinhanh'],'masp'=>$cart_item['masp']);
-            }
-            else{
+            }else{
+                $sanpham_query = mysqli_query($conn,"SELECT * FROM tbl_sanpham WHERE id_sanpham='{$cart_item['id']}'");
+                $row = mysqli_fetch_assoc($sanpham_query);
+                if($cart_item['soluong'] < $row['soluong']){
                 $product[] = array('tensanpham'=>$cart_item['tensanpham'],'id'=>$cart_item['id'],'soluong'=>$cart_item['soluong']+1,'giasp'=>$cart_item['giasp'],'hinhanh'=>$cart_item['hinhanh'],'masp'=>$cart_item['masp']);
+                }else{
+                    $product[] = array('tensanpham'=>$cart_item['tensanpham'],'id'=>$cart_item['id'],'soluong'=>$cart_item['soluong'],'giasp'=>$cart_item['giasp'],'hinhanh'=>$cart_item['hinhanh'],'masp'=>$cart_item['masp']);
+                }
             }
         }
         $_SESSION['cart'] = $product;

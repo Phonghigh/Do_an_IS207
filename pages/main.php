@@ -31,6 +31,9 @@
         elseif ($pages == 'timkiem'){
             include('pages/main/timkiem.php');
         }
+        elseif ($pages == 'camon'){
+            include('pages/main/camon.php');
+        }
         // elseif ($pages == 'tintuc'){
         //     include('pages/main/tintuc.php');
         // }

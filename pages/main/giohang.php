@@ -63,7 +63,7 @@
         </tr>
         <tr>
         <td colspan ='8'>";
-        if(isset($_SESSION['dangky'])) {
+        if(isset($_SESSION['dangky'])or isset($_SESSION['dangnhap'])) {
             echo "<a href='index.php?quanly=thanhtoan'>Đặt hàng</a></td></tr>";
         }else{
             echo "<a href='index.php?quanly=dangky&giohang=true'>Đăng Ký để đặt hàng</a></td></tr>";

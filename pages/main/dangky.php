@@ -14,10 +14,12 @@
         if ($sql_dangky) {
         echo"<script>alert ('Bạn đã đăng ký thành công') </script>";
         $_SESSION['dangky'] = $tenkhachhang;
+        $_SESSION['id_khachhang'] = mysqli_insert_id( $conn );
+
         if (isset($_GET['giohang'])){
             header('Location: index.php?quanly=giohang');
             }else{ 
-                echo'helllo';
+                // echo'helllo';
             header('Location: index.php');
             }
         }

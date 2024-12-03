@@ -8,6 +8,7 @@ if(isset($_POST['dangnhap'])){
         $count = mysqli_num_rows($result);
         if($count > 0){
             $_SESSION['dangnhap'] = $row['tenkhachhang'];
+            $_SESSION['id_khachhang'] = $row['id_dangky'];
             // echo "{$_SESSION['dangnhap']}";
             header('Location: index.php');
         }else{

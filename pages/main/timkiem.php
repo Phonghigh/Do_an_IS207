@@ -7,6 +7,10 @@
     $sql_sp ="SELECT * FROM tbl_sanpham WHERE tensanpham LIKE '%".$tukhoa."%'";
     $row_sp = mysqli_query($conn,$sql_sp)
 ?>
+<form action="index.php?quanly=timkiem" method="POST" class="timkiem">
+    <input type="text" name="tukhoa" placeholder="Tìm kiếm sản phẩm...">
+    <input type="submit" name="timkiem" value="Tìm Kiếm">
+</form>
 
 <h3>Từ khóa tìm kiếm: <?php echo $_POST['tukhoa'] ?></h3>
 <div class="grip_container_maincontent">
