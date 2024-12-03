@@ -4,9 +4,11 @@ if(isset($_POST['dangnhap'])){
         $matkhau = md5($_POST['Password']);
         $sql = "SELECT * FROM tbl_dangky WHERE email='".$taikhoan."' AND matkhau = '".$matkhau."' LIMIT 1";
         $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
         $count = mysqli_num_rows($result);
         if($count > 0){
-            $_SESSION['dangnhap'] = $taikhoan;
+            $_SESSION['dangnhap'] = $row['tenkhachhang'];
+            // echo "{$_SESSION['dangnhap']}";
             header('Location: index.php');
         }else{
             echo '<script> alert("Tài khoản hoặc mật khẩu không đúng, vui lòng nhập lại.")</script>';

@@ -66,7 +66,7 @@
         if(isset($_SESSION['dangky'])) {
             echo "<a href='index.php?quanly=thanhtoan'>Đặt hàng</a></td></tr>";
         }else{
-            echo "<a href='index.php?quanly=dangky'>Đăng Ký để đặt hàng</a></td></tr>";
+            echo "<a href='index.php?quanly=dangky&giohang=true'>Đăng Ký để đặt hàng</a></td></tr>";
         }
     }
     

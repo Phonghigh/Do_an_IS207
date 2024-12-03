@@ -28,15 +28,5 @@
         <li><a href="index.php?quanly=lienhe">Liên hệ</a></li>
     </ul>
     
-    <?php 
-        if(isset($_SESSION['dangky'])){
-            
-            echo "<p class='ten_taikhoan'>Xin chào {$_SESSION['dangky']}</p>";
-            echo "<a href='index.php?dangxuat'>Đăng Xuất</a>";
-        }else{
-            echo "<a href='index.php?quanly=dangnhap'>Đăng Nhập</a>";
-            echo "<a href='index.php?quanly=dangky'>Đăng Ký</a>";
-        }
-    ?>
 </div>
         

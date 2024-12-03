@@ -12,9 +12,14 @@
     else {
         $sql_dangky = mysqli_query($conn,"INSERT INTO tbl_dangky(tenkhachhang,email,diachi,matkhau,dienthoai) VALUE ('{$tenkhachhang}','{$email}','{$diachi}','{$password}','{$dienthoai}')" );
         if ($sql_dangky) {
-        echo"<p> Bạn đã đăng ký thành công</p>";
+        echo"<script>alert ('Bạn đã đăng ký thành công') </script>";
         $_SESSION['dangky'] = $tenkhachhang;
-        header('Locaion: index.php?quanly=giohang');
+        if (isset($_GET['giohang'])){
+            header('Location: index.php?quanly=giohang');
+            }else{ 
+                echo'helllo';
+            header('Location: index.php');
+            }
         }
     }
 }
@@ -22,7 +27,7 @@
 
 <div class="form-container">
     <h2 style="text-align: center;">Register</h2>
-    <form action="" method="POST">
+    <form method="POST">
         <input type="text" name ="tenkhachhang" placeholder="Full Name" required>
         <input type="email" name ="email" placeholder="Email" required>
         <input type="text" name ="dienthoai" placeholder="Điện Thoại" required>

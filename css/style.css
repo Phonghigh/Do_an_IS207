@@ -259,3 +259,22 @@ a{
     width: 300px;
     margin: 0 auto;
 }
+
+.taikhoan{
+    float: right;
+    padding: 10px;
+    margin-top: 30px;
+    /* margin-right: 20px; */
+    font-size: 20px;
+}
+
+.taikhoan  a{
+    padding: 20px;
+    float: right;
+}
+
+.taikhoan a:hover{
+    background: gray;
+    border-radius: 10px;
+    color: white;
+}

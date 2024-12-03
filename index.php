@@ -10,6 +10,7 @@
     <div class="wrapper">
         <?php
             session_start();
+            // echo $_SESSION['dangky'];
             include("admincp/config/connect.php");
             include("pages/header.php");
             include("pages/menu.php");
