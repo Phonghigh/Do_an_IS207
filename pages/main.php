@@ -28,6 +28,9 @@
         elseif ($pages == 'thanhtoan'){
             include('pages/main/thanhtoan.php');
         }
+        elseif ($pages == 'timkiem'){
+            include('pages/main/timkiem.php');
+        }
         // elseif ($pages == 'tintuc'){
         //     include('pages/main/tintuc.php');
         // }

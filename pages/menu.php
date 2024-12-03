@@ -27,6 +27,10 @@
         <li><a href="index.php?quanly=tintuc">Tin tức</a></li>
         <li><a href="index.php?quanly=lienhe">Liên hệ</a></li>
     </ul>
+    <form action="index.php?quanly=timkiem" method="POST">
+        <input type="text" name="tukhoa" placeholder="Tìm kiếm sản phẩm...">
+        <input type="submit" name="timkiem" value="Tìm Kiếm">
+    </form>
     
 </div>
         
