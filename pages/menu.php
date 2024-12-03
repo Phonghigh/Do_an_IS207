@@ -28,7 +28,4 @@
         <li><a href="index.php?quanly=lienhe">Liên hệ</a></li>
     </ul>
 </div>
-<form action="index.php?quanly=timkiem" method="POST" class="timkiem">
-    <input type="text" name="tukhoa" placeholder="Tìm kiếm sản phẩm...">
-    <input type="submit" name="timkiem" value="Tìm Kiếm">
-</form>
+

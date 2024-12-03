@@ -4,7 +4,11 @@
     $row_lietke_sp = mysqli_query($conn,$sql_lietke_sp)
 ?>
 
-<h3>Danh mục sản phẩm: </h3>
+<form action="index.php?quanly=timkiem" method="POST" class="timkiem">
+    <input type="text" name="tukhoa" placeholder="Tìm kiếm sản phẩm...">
+    <input type="submit" name="timkiem" value="Tìm Kiếm">
+</form>
+
 <div class="grip_container_maincontent">
     
         <?php
@@ -20,3 +24,10 @@
         }
         ?>
 </div>
+
+<script>
+    
+    $('.list_menu li a').removeClass('highlight');
+    $(this).addClass('highlight');
+    
+</script>
