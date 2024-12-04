@@ -11,7 +11,8 @@
         <th>Địa chỉ</th>
         <th>Email</th>
         <th>Điện thoại</th>
-        <th>Quản lý</th>
+        <th colspan="2">Quản lý</th>
+
     </tr>
     <?php
     $i = 0;
@@ -25,7 +26,10 @@
         <td>{$row['email']}</td>
         <td>{$row['dienthoai']}</td>
         <td>
-            <a href=".'model/quanlydonhang/xemdonhang.php?madh='.$row['madh'].">Xem</a>
+            <a href=".'model/quanlydonhang/xemdonhang.php?madh='.$row['madh'].">Xem đơn hàng</a>
+        </td>
+        <td>
+            <a href=".'model/quanlydonhang/indonhang.php?madh='.$row['madh'].">In đơn hàng</a>
         </td>
     </tr>";
     }
