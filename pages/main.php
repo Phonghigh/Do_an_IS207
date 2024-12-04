@@ -10,11 +10,6 @@
         else{
             $pages = '';
         }
-
-
-        if ($pages !='lienhe'){
-            include("pages/sidebar/sidebar.php");
-        }
         if ($pages =='danhmucsanpham'){
             include('pages/main/danhmucsanpham.php');
         }
