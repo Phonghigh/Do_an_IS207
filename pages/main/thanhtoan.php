@@ -2,7 +2,8 @@
     // session_start();
     // include("../../admincp/config/connect.php");
     require("mail/sendmail.php");
-
+    require 'admincp/Carbon/autoload.php';
+    use Carbon\Carbon;
     $id_khachhang = $_SESSION['id_khachhang'];
     $code_order = rand(0,999999);
     $insert_cart = "INSERT INTO tbl_giohang(id_khachhang,madh,status) VALUES({$id_khachhang},'{$code_order}',1)";
@@ -19,7 +20,9 @@
             $stocking = $row["soluong"] - $soluong;
             // echo "{$row['soluong']}, $soluong";
             $soluong_update = mysqli_query($conn,"UPDATE tbl_sanpham SET soluong = $stocking WHERE id_sanpham='{$id_sanpham}'");
-            $insert_order_details = "INSERT INTO tbl_giohang_chitiet(id_sanpham,madh,soluong) VALUES({$id_sanpham},'{$code_order}',{$soluong})";
+            $now = Carbon::now('Asia/Ho_Chi_Minh')->toDateString();
+            // echo $now;
+            $insert_order_details = "INSERT INTO tbl_giohang_chitiet(id_sanpham,madh,soluong,ngaydat) VALUES({$id_sanpham},'{$code_order}',{$soluong},'{$now}')";
             mysqli_query($conn,$insert_order_details);
             //nội dung gửi mail
             $thanhtien = $soluong * (int)$row['giasp'];

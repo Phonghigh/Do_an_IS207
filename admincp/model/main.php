@@ -33,14 +33,11 @@
         }
         //     include('../pages/main/giohang.php');
         // }
-        // elseif ($pages == 'quanlybaiviet'){
-        //     include('../pages/main/tintuc.php');
-        // }
         // elseif ($pages == 'quanlydanhmucbaiviet'){
         //     include('../pages/main/lienhe.php');
         // }
         else{
-            // include('../Do_an_IS207/admincp/model/dashboard.php');
+            include('model/dashboard.php');
         }
         ?>
 </div>
