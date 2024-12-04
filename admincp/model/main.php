@@ -23,6 +23,10 @@
             include('model/quanlysp/them.php');
             include('model/quanlysp/lietke.php');
         }
+        elseif ($pages=='quanlydonhang'){
+            // include('model/quanlysp/them.php');
+            include('model/quanlydonhang/lietke.php');
+        }
         elseif ($pages=='dangxuat'){
             unset($_SESSION['dangnhap']);
             header('Location: login.php');
