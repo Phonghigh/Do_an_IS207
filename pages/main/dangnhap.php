@@ -9,6 +9,7 @@ if(isset($_POST['dangnhap'])){
         if($count > 0){
             $_SESSION['dangnhap'] = $row['tenkhachhang'];
             $_SESSION['id_khachhang'] = $row['id_dangky'];
+            $_SESSION['email'] = $row['email'];
             // echo "{$_SESSION['dangnhap']}";
             header('Location: index.php');
         }else{

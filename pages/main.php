@@ -34,6 +34,9 @@
         elseif ($pages == 'camon'){
             include('pages/main/camon.php');
         }
+        elseif ($pages == 'thaydoimatkhau'){
+            include('pages/main/thaydoimatkhau.php');
+        }
         // elseif ($pages == 'tintuc'){
         //     include('pages/main/tintuc.php');
         // }
