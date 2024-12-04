@@ -1,6 +1,6 @@
 <div class="main">
     <?php
-    include("pages/sidebar/sidebar.php");
+    
     ?>
     <div class="maincontent">
         <?php
@@ -9,6 +9,11 @@
         }
         else{
             $pages = '';
+        }
+
+
+        if ($pages !='lienhe'){
+            include("pages/sidebar/sidebar.php");
         }
         if ($pages =='danhmucsanpham'){
             include('pages/main/danhmucsanpham.php');
@@ -37,12 +42,9 @@
         elseif ($pages == 'thaydoimatkhau'){
             include('pages/main/thaydoimatkhau.php');
         }
-        // elseif ($pages == 'tintuc'){
-        //     include('pages/main/tintuc.php');
-        // }
-        // elseif ($pages == 'lienhe'){
-        //     include('pages/main/lienhe.php');
-        // }
+        elseif ($pages == 'lienhe'){
+            include('pages/main/lienhe.php');
+        }
         else{
             include('pages/main/index.php');
         }

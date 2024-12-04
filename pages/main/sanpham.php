@@ -30,7 +30,31 @@
         </div>
     </form>
 </div>
-
-<?php
-
-?>
+<div class="clear"></div>
+<div class="tabs">
+    <ul id="tabs-nav">
+        <li><a href="#chitiet">Tóm tắt sản phẩm</a></li>
+        <li><a href="#noidung">Nội dung</a></li>
+        <li><a href="#hinhanh">Hình ảnh</a></li>
+    </ul>
+    <div id="tabs-content">
+        <h1>Tóm tắt sản phẩm</h1>
+        <div id="chitiet" class="tab-content">
+            <?php
+                echo $sanpham['tomtat'];
+            ?>
+        </div>
+        <h1>Nội dung</h1>
+        <div id="noidung" class="tab-content">
+            <?php
+                echo $sanpham['noidung'];
+            ?>
+        </div>
+        <h1>Hình ảnh</h1>
+        <div id="hinhanh" class="tab-content">
+            <img width="400px" src="admincp/model/quanlysp/uploads/<?php
+                echo $sanpham['hinhanh'];
+            ?>">
+        </div>
+    </div>
+</div>

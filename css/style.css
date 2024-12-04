@@ -157,9 +157,8 @@ a{
 .maincontent{
     /* border: 1px solid #000060; */
     height: auto;
-    width: 78%;
-    margin-top: 5px;
-    margin-right: 5px;
+    width: 100%;
+    margin: 10px auto;
     /* background: #00e6ac; */
     /* float: right; */
 }
@@ -168,7 +167,7 @@ a{
     /* border:  1px solid; */
     margin-top: 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 30px;
 }
 .grip_item_maincontent{
@@ -330,4 +329,54 @@ transform: scale(1);
 .timkiem input[type="text"]::placeholder {
 color: #999;
 font-style: italic;
+}
+
+.container_lienhe {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.container_lienhe h1 {
+    text-align: center;
+    color: #0078d7;
+}
+
+.container_lienhe iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+.tabs{
+    width: 70%;
+    border: 5px solid #0e1bd1;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+#tabs-nav{
+    background: #0078d7;
+}
+
+ul#tabs-nav{
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    overflow: auto;
+}
+
+ul#tabs-nav li{
+    float: left;
+    font-weight: bold;
+    margin-right: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+ul#tabs-nav li:hover{
+    background: #7efbff;
+    /* color: white; */
 }
