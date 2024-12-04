@@ -66,7 +66,8 @@
         if(isset($_SESSION['dangky'])or isset($_SESSION['dangnhap'])) {
             echo "<a href='index.php?quanly=thanhtoan'>Đặt hàng</a></td></tr>";
         }else{
-            echo "<a href='index.php?quanly=dangky&giohang=true'>Đăng Ký để đặt hàng</a></td></tr>";
+            echo "<a href='index.php?quanly=dangky&giohang=true' style='margin-right: 50px'>Đăng ký để đặt hàng</a>";
+            echo "<a href='index.php?quanly=dangnhap&giohang=true'>Đăng nhập để đặt hàng</a></td></tr>";
         }
     }
     
